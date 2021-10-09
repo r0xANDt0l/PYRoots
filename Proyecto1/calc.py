@@ -1,4 +1,4 @@
-# nombre = "Rodrigo"
+# nombre = "Nombre"
 
 # premi = nombre[0:5]
 # segu = nombre[5:]
