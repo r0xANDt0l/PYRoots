@@ -13,7 +13,6 @@ while True:
     x = input(ac)
 
     ope = x[0]
-  
 
     if ope == 'cl':
         ac = 0
@@ -22,22 +21,16 @@ while True:
         break
 
     num = float(x[1:])
-    
+
     if ope == '+':
-        ac+=num
+        ac += num
     if ope == '-':
-        ac-=num   
+        ac -= num
     if ope == '*':
-        ac*=num  
+        ac *= num
     if ope == ':':
-        ac/=num
+        ac /= num
     if ope == '^':
         ac **= num
     if ope == 'r':
-        ac **= 1/num
-        
-    
-        
-
-
-
+        ac **= 1 / num
