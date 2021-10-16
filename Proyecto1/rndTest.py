@@ -14,3 +14,6 @@ while N >= minN and N <= maxN:
         break
     else:
         atts += 1
+
+
+# Shortcut test ctrl + shift + Z
