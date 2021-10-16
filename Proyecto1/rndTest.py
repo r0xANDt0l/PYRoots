@@ -17,3 +17,4 @@ while N >= minN and N <= maxN:
 
 
 # Shortcut test ctrl + shift + Z
+# Didn't work :(
