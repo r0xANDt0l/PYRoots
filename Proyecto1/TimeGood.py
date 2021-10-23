@@ -1,9 +1,9 @@
 import time
 months = [31 ,28 ,31 ,30 ,31 ,30 ,31 ,31 ,30 ,31 ,30 ,31 ]
 i = 0
+Tm = int(input("Cual es tu zona horaria en GMT:"))
 while True:
-    t = time.time()
-    
+    t = time.time() + 3600*Tm #Obtener hora Unix y convertirla a zona horaria
     yearsUnix = t//31536000
     yearsCE = yearsUnix+1970
 
@@ -26,3 +26,4 @@ while True:
 
     print("Year" ,int(yearsCE), "/",month ,"month /", int(days), "days /", int(hours), "hours /", int(mins), "mins /", int(secs), "secs") # Imprimir los numeros
 
+#I'm sure this code isn't the most efficient one, but i'm learning
