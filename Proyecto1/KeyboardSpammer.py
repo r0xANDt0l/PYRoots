@@ -10,4 +10,4 @@ while True:
             keyboard.send('enter')
             time.sleep(0.01)
     if keyboard.is_pressed('esc'):
-        break  
+        break
