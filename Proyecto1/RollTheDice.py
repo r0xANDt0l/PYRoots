@@ -5,7 +5,7 @@ import time
 sides = 1
 sidesSelect = input("Amount of sides the dice has. If empty, 6: ")
 is_non_empty= bool(sidesSelect)
-if is_non_empty == False:
+if is_non_empty is False:
     sides = 6
 else:
     sides = sidesSelect
