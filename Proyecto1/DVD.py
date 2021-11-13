@@ -13,12 +13,12 @@ def draw(deltaTime):
     posX += movX
     posY += movY
 
-    if posX >= windW-size/2 or posX <= 0+size/2:
+    if posX >= windW-size/2 or posX <= size/2:
         movX *= -1
         colour1 = randint(0,255)
         colour2 = randint(0,255)
         colour2 = randint(0,255)
-    if posY >= windH-size/2 or posY <= 0+size/2:
+    if posY >= windH-size/2 or posY <= size/2:
         movY *= -1 
         colour1 = randint(0,255)
         colour2 = randint(0,255)
