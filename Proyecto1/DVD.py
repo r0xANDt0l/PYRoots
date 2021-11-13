@@ -1,39 +1,42 @@
+import numbers
 import arcade
 from arcade import color
 from random import randint
 
+
+def RNDColor():
+    return(randint(0,255) ,randint(0,255) ,randint(0,255) )
+
 def draw(deltaTime):
-    global posX, posY, movX, movY, size, colour1, colour2, colour3
-
+    
     arcade.start_render()
-    arcade.set_background_color(color.AIR_FORCE_BLUE)
 
-    arcade.draw_circle_filled(posX,posY,size,(colour1,colour2,colour3))
+    for i in range(numbS):
+        arcade.set_background_color(color.AIR_FORCE_BLUE)
 
-    posX += movX
-    posY += movY
+        arcade.draw_circle_filled(posX[i],posY[i],size,colour[i])
 
-    if posX >= windW-size/2 or posX <= size:
-        movX *= -1
-        colour1 = randint(0,255)
-        colour2 = randint(0,255)
-        colour2 = randint(0,255)
-    if posY >= windH-size/2 or posY <= size:
-        movY *= -1 
-        colour1 = randint(0,255)
-        colour2 = randint(0,255)
-        colour2 = randint(0,255)
+        posX[i] += movX[i]
+        posY[i] += movY[i]
+
+        if posX[i] >= windW-size or posX[i] <= size:
+            movX[i] *= -1
+            colour[i] = RNDColor()
+        if posY[i] >= windH-size or posY[i] <= size:
+            movY[i] *= -1 
+            colour[i] = RNDColor()
 windW = 800
 windH = 600
 
-posX = [windW/2]
-posY = [windH/2]
-movX = [2]
-movY = [2]
+
 size = 25
-colour1 = [255]
-colour2 = [255]
-colour3 = [255]
+numbS = randint(1,25)
+posX = [randint(size,windW-size) for i in range(numbS)]
+posY = [randint(size,windW-size) for i in range(numbS)]
+
+movX = [randint(-10,10) for i in range(numbS)]
+movY = [randint(-10,10) for i in range(numbS)]
+colour = [RNDColor() for i in range(numbS)]
 
 arcade.open_window(windW,windH, "DVD")
 
