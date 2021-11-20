@@ -37,11 +37,13 @@ def movement( i : int):
     if posX[i] >= windW-radius or posX[i] <= radius:
         movX[i] *= -1
         posX[i] += movX[i]
-        colour[i] = RNDColor()
+        movX[i] *= elas
+        # colour[i] = RNDColor()
     if posY[i] >= windH-radius or posY[i] <= radius:
         movY[i] *= -1 
         posY[i] += movY[i]
-        colour[i] = RNDColor()
+        movY[i] *= elas
+        # colour[i] = RNDColor()
 
     movX[i] += gravX
     movY[i] += gravY
@@ -68,10 +70,11 @@ windH = 600
 
 
 radius = 25
-numbS = 15
+numbS = 14
 
 gravX = 0
 gravY = -1
+elas = -0.8
 
 speed = randint(1,20)
 posX = [randint(radius,windW-radius) for i in range(numbS)]
