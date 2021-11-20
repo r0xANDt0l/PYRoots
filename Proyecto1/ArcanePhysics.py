@@ -64,28 +64,19 @@ windW = 800
 windH = 600
 
 
-radius = 5
-numbS = 100
+radius = 25
+numbS = 15
+
+gravX = 0
+gravY = 1
+
 speed = randint(1,20)
 posX = [randint(radius,windW-radius) for i in range(numbS)]
 posY = [randint(radius,windH-radius) for i in range(numbS)]
 
-movX = [randint(-1000,1000) for i in range(numbS)]
-movY = [randint(-1000,1000) for i in range(numbS)]
+movX = [randint(-10,10) for i in range(numbS)]
+movY = [randint(-10,10) for i in range(numbS)]
 
-for i in range(numbS):
-    x = movX[i]
-    y = movY[i]
-    mod = math.sqrt(x*x+y*y)
-
-    x/= mod
-    y/= mod
-
-    x *= speed
-    y *= speed
-
-    movX[i] = x
-    movY[i] = y
 
 
 colour = [RNDColor() for i in range(numbS)]
