@@ -52,16 +52,22 @@ def movement( i : int):
     movY[i] *= friction
 
 def draw(deltaTime):
-    global t
+    global t, gravX, gravY
     arcade.start_render()
     
     t -=deltaTime
 
-    round(t,2)
+    # round(t,2)
 
+    gravXLine = gravX/4
+    gravYLine = gravY/4
+
+    arcade.draw_line(windW/2,windH/2,gravXLine,gravYLine,color=color.RED)
+    
     if t <= 0:
         t = 5
-        # numbS += 1
+        gravX = randint(-5,5)
+        gravY = randint(-5,5)
     arcade.draw_text(str(t),windW/2,windH/3)
 
     for i in range(numbS):
@@ -84,7 +90,7 @@ numbS = 1
 t = 5
 
 gravX = 0
-gravY = -1
+gravY = 0
 
 friction = uniform(0.9,0.999)
 elas = 1
