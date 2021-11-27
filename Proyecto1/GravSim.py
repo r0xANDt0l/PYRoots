@@ -6,7 +6,6 @@ from arcade import color
 from random import randint
 from random import uniform
 
-t = 0
 
 def RNDColor():
     return(randint(0,255) ,randint(0,255) ,randint(0,255) )
@@ -55,9 +54,15 @@ def movement( i : int):
 def draw(deltaTime):
     global t
     arcade.start_render()
+    
+    t -=deltaTime
 
-    t += deltaTime
-    arcade.draw_text(t,windW/2,windH/4)
+    round(t,2)
+
+    if t <= 0:
+        t = 5
+        # numbS += 1
+    arcade.draw_text(str(t),windW/2,windH/3)
 
     for i in range(numbS):
         arcade.draw_circle_filled(posX[i],posY[i],radius,colour[i])
@@ -76,7 +81,7 @@ windH = 600
 
 radius = 25
 numbS = 1
-
+t = 5
 
 gravX = 0
 gravY = -1
@@ -95,6 +100,8 @@ movY = [randint(-10,10) for i in range(numbS)]
 
 colour = [RNDColor() for i in range(numbS)]
 
-arcade.open_window(windW,windH, "DVD")
+arcade.open_window(windW,windH, "Grav sim")
 
 arcade.schedule(draw,1/60)
+
+arcade.run()
