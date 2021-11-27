@@ -74,7 +74,7 @@ numbS = 14
 
 gravX = 0
 gravY = -1
-elas = -0.8
+elas = 1
 
 speed = randint(1,20)
 posX = [randint(radius,windW-radius) for i in range(numbS)]
