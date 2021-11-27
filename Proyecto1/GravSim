@@ -52,8 +52,12 @@ def movement( i : int):
     movY[i] *= friction
 
 def draw(deltaTime):
-    
+    global t
     arcade.start_render()
+
+    t += deltaTime
+    round(t)
+    arcade.draw_text(t,windW/2,windH/4)
 
     for i in range(numbS):
         arcade.draw_circle_filled(posX[i],posY[i],radius,colour[i])
@@ -72,6 +76,8 @@ windH = 600
 
 radius = 25
 numbS = 1
+
+t = 0
 
 gravX = 0
 gravY = -1
