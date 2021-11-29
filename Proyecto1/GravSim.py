@@ -59,16 +59,16 @@ def draw(deltaTime):
 
     # round(t,2)
 
-    gravXLine = gravX/4
-    gravYLine = gravY/4
+    gravXLine = gravX*10+windW/2
+    gravYLine = gravY*10+windH/2
 
     arcade.draw_line(windW/2,windH/2,gravXLine,gravYLine,color=color.RED)
-    
+
     if t <= 0:
         t = 5
         gravX = randint(-5,5)
         gravY = randint(-5,5)
-    arcade.draw_text(str(t),windW/2,windH/3)
+    arcade.draw_text("%.2f"%t,windW/2-windW/16,windH/1.5,color.WHITE,50)
 
     for i in range(numbS):
         arcade.draw_circle_filled(posX[i],posY[i],radius,colour[i])
@@ -86,7 +86,7 @@ windH = 600
 
 
 radius = 25
-numbS = 1
+numbS = 20
 t = 5
 
 gravX = 0

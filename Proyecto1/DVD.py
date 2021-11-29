@@ -42,8 +42,8 @@ def movement( i : int):
         posY[i] += movY[i]
         colour[i] = RNDColor()
 
-    movX[i] *= 0.97
-    movY[i] *= 0.97
+    movX[i] *= 0.99
+    movY[i] *= 0.99
 
 def draw(deltaTime):
     
@@ -60,8 +60,8 @@ def draw(deltaTime):
             CheckCollision(i,j)
 
        
-windW = 800
-windH = 600
+windW = 1920
+windH = 1080
 
 
 radius = 5

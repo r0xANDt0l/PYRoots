@@ -89,19 +89,19 @@ def draw(deltaTime):
         for j in range(numbS):
             if i == j:
                 continue
-            # CheckCollision(i,j)
+            CheckCollision(i,j)
 
        
 
 
 radius = 25
-numbS = 5
+numbS = 10
 t = 5
 
 gravX = [0 for i in range(numbS)]
 gravY = [0 for i in range(numbS)]
 
-friction = 0.03
+friction = 0.9
 elas = 1
 
 speed = randint(1,20)
