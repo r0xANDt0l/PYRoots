@@ -120,5 +120,3 @@ arcade.open_window(windW,windH, "Grav sim")
 arcade.schedule(draw,1/60)
 
 arcade.run()
-
-#this is the place for jokes when i have access to github copilot lol and tf is the osu theme i love it lmao :=)

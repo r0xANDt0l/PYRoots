@@ -92,6 +92,6 @@ colour = [RNDColor() for i in range(numbS)]
 
 arcade.open_window(windW,windH, "DVD")
 
-arcade.schedule(draw,1/60)
+arcade.schedule(draw,1/120)
 
 arcade.run()
