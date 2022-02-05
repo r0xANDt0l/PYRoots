@@ -31,7 +31,7 @@ while True:
     turtle.forward(50)
     turtle.right(360/sides)
     count +=1
-    print("Lados: " + sides)
+    # print("Lados: " + sides)
     if count == sides:
         turtle.pencolor(RandomCol())
         sides += 1
